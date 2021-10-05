@@ -20,7 +20,8 @@ public class PhoneNumber extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPhoneNumberBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        
+        getSupportActionBar().hide();
         auth = FirebaseAuth.getInstance();
         if(auth.getCurrentUser() != null) {
             Intent intent = new Intent(PhoneNumber.this, MainActivity.class);
